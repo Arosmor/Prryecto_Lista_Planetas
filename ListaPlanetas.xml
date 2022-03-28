@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<listaPlanetas>
+    <listaPlanetas>
+        <distanciaSol>0.0</distanciaSol>
+        <grabedad>0.0</grabedad>
+        <nombre>Planeta Tierra</nombre>
+        <numSatelites>0</numSatelites>
+        <orbita>Eliptica</orbita>
+    </listaPlanetas>
+    <listaPlanetas>
+        <distanciaSol>0.0</distanciaSol>
+        <grabedad>0.0</grabedad>
+        <numSatelites>0</numSatelites>
+    </listaPlanetas>
+    <listaPlanetas>
+        <distanciaSol>0.0</distanciaSol>
+        <grabedad>0.0</grabedad>
+        <nombre>Paneta Marte</nombre>
+        <numSatelites>0</numSatelites>
+        <orbita>Eliptica</orbita>
+    </listaPlanetas>
+</listaPlanetas>
