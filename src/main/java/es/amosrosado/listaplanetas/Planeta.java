@@ -33,11 +33,11 @@ public class Planeta {
         this.nombre = nombre;
     }
     
-    public boolean getRocoso() {
+    public Boolean isRocoso() {
         return rocoso;
     }
     
-    public void isRocoso(Boolean rocoso) {
+    public void setRocoso(Boolean rocoso) {
         this.rocoso = rocoso;
     }
 

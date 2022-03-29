@@ -2,6 +2,7 @@
 package es.amosrosado.listaplanetas;
 
 import java.util.ArrayList;
+import javax.xml.bind.annotation.XmlElement;
 import javax.xml.bind.annotation.XmlRootElement;
 
 
@@ -14,6 +15,7 @@ public class ListaPlanetas {
         return listaPlanetas;
     }   
     
+    @XmlElement(name = "planeta")
     public void setListaPlanetas(ArrayList<Planeta> listaPlanetas) {
         this.listaPlanetas = listaPlanetas;
     
