@@ -7,7 +7,7 @@ import javax.xml.bind.annotation.XmlRootElement;
 
 
 @XmlRootElement
-public class ListaPlanetas {
+public class Planetas {
     
     private ArrayList<Planeta> listaPlanetas = new ArrayList();
 
@@ -19,5 +19,14 @@ public class ListaPlanetas {
     public void setListaPlanetas(ArrayList<Planeta> listaPlanetas) {
         this.listaPlanetas = listaPlanetas;
     
+    }
+    
+    public static void unirPlanetas(Planetas planetasImport) {
+        
+        
+        
+        planetasImport.get().add();
+        
+        
     }
 }

@@ -13,9 +13,9 @@ public class ObtenerFile {
     public static void obtenerArchivo(Stage stage) {
      
         try {
-            JAXBContext context = JAXBContext.newInstance(ListaPlanetas.class );
+            JAXBContext context = JAXBContext.newInstance(Planetas.class );
             Unmarshaller unmarshaller = context.createUnmarshaller();
-            ListaPlanetas listaPlanetas = (ListaPlanetas)unmarshaller.unmarshal(
+            Planetas listaPlanetas = (Planetas)unmarshaller.unmarshal(
                 new File("src/Planeta.xml") );
              
 //            System.out.println(planeta.getNombre());

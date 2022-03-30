@@ -1,6 +1,6 @@
 es\amosrosado\listaplanetas\UtilXML.class
+es\amosrosado\listaplanetas\Planetas.class
 es\amosrosado\listaplanetas\ObtenerFile.class
 module-info.class
 es\amosrosado\listaplanetas\App.class
-es\amosrosado\listaplanetas\ListaPlanetas.class
 es\amosrosado\listaplanetas\Planeta.class

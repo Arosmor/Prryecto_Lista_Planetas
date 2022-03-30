@@ -1,6 +1,7 @@
 package es.amosrosado.listaplanetas;
 
 import javafx.application.Application;
+import javafx.geometry.Pos;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.layout.HBox;
@@ -14,6 +15,8 @@ public class App extends Application {
     @Override
     public void start(Stage stage) {
         HBox root = new HBox();
+        root.setAlignment(Pos.CENTER);
+        root.setSpacing(10);
         var scene = new Scene(root, 640, 480);
         stage.setScene(scene);
         stage.show();
@@ -43,27 +46,30 @@ public class App extends Application {
         planeta3.setNumSatelites(75);
         planeta3.setDistanciaSol((float)90);
         
-        
-        ListaPlanetas listaPlanetas = new ListaPlanetas();
-        listaPlanetas.getListaPlanetas().add(planeta1);
-        listaPlanetas.getListaPlanetas().add(planeta2);
-        listaPlanetas.getListaPlanetas().add(planeta3);
+        // De esta lista añadimos el libro 1, el planeta 2, el planeta 3
+        Planetas planetas = new Planetas();
+        planetas.getListaPlanetas().add(planeta1);
+        planetas.getListaPlanetas().add(planeta2);
+        planetas.getListaPlanetas().add(planeta3);
 
+//        Planetas planetasImport = new Planetas();
         
         
         Button buttonSelectFile = new Button("Guardar archivo XML");
         root.getChildren().add(buttonSelectFile);
         buttonSelectFile.setOnAction((t) -> {
-            UtilXML.guardarDatosXML(stage, listaPlanetas);
+            UtilXML.guardarDatosXML(stage, planetas);
         });
         
-        Button buttonObtenerFile = new Button("Importar archivo XML");
-        root.getChildren().add(buttonObtenerFile);
-        buttonSelectFile.setOnAction((t) -> {
-            
-            
-            ObtenerFile.obtenerArchivo(stage);
+        Button buttonImportFile = new Button("Importar archivo XML");
+        root.getChildren().add(buttonImportFile);
+        buttonImportFile.setOnAction((t) -> {
+            Planetas planetasImport = UtilXML.obtenerArchivo(stage);
+            System.out.println("Numero de planetas importados: ");
+            System.out.print(planetasImport.getListaPlanetas().size());
         });
+        
+        
         
     }
 
