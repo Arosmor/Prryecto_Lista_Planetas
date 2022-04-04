@@ -4,17 +4,19 @@ import javafx.application.Application;
 import javafx.geometry.Pos;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
-import javafx.scene.layout.HBox;
-import javafx.scene.layout.StackPane;
+import javafx.scene.control.Label;
+import javafx.scene.control.TextArea;
+import javafx.scene.layout.VBox;
 import javafx.stage.Stage;
 
 
 
 public class App extends Application {
 
+    int planetaActual = 0;
     @Override
     public void start(Stage stage) {
-        HBox root = new HBox();
+        VBox root = new VBox();
         root.setAlignment(Pos.CENTER);
         root.setSpacing(10);
         var scene = new Scene(root, 640, 480);
@@ -52,9 +54,7 @@ public class App extends Application {
         planetas.getListaPlanetas().add(planeta2);
         planetas.getListaPlanetas().add(planeta3);
 
-//        Planetas planetasImport = new Planetas();
-        
-        
+
         Button buttonSelectFile = new Button("Guardar archivo XML");
         root.getChildren().add(buttonSelectFile);
         buttonSelectFile.setOnAction((t) -> {
@@ -70,7 +70,31 @@ public class App extends Application {
         });
         
         
+        Label labelNombre = new Label("");
+        root.getChildren().add(labelNombre);
         
+        Button buttonSiguiente = new Button("Siguiente");
+        root.getChildren().add(buttonSiguiente);
+        buttonSiguiente.setOnAction((t) -> {
+            planetaActual++;
+            try {
+                labelNombre.setText(planetas.getListaPlanetas().get(planetaActual).toString());
+            } catch(Exception ex) {
+                
+            }
+        });
+        
+        Button buttonAnterior = new Button("Anterior");
+        root.getChildren().add(buttonAnterior);
+        buttonAnterior.setOnAction((t) -> {
+            planetaActual--;
+            try {
+                labelNombre.setText(planetas.getListaPlanetas().get(planetaActual).toString());
+            } catch(Exception ex) {
+                
+            }       
+        });
+   
     }
 
 

@@ -18,15 +18,11 @@ public class Planetas {
     @XmlElement(name = "planeta")
     public void setListaPlanetas(ArrayList<Planeta> listaPlanetas) {
         this.listaPlanetas = listaPlanetas;
-    
     }
     
-    public static void unirPlanetas(Planetas planetasImport) {
-        
-        
-        
-        planetasImport.get().add();
-        
+    // Une los planetas que ya tenemos con los planetas importados con el fichero xml obtenido
+    public void unirPlanetas(Planetas planetasImport) {
+        this.getListaPlanetas().addAll(listaPlanetas);
         
     }
 }
