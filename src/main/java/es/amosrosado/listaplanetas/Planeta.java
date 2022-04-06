@@ -78,6 +78,10 @@ public class Planeta {
         String r = "";
         r += "Nombre: " + nombre + "\n";
         r += "Orbita: " + orbita + "\n";
+        r += "Numero de Satélites: " + numSatelites + "\n";
+        r += "Grabedad: " + grabedad + " m/s² \n";
+        r += "Distancia al Sol: " + distanciaSol + " Millones de Km \n";
+        r += "Orbita: " + orbita + "\n";
         return r;
     }
 }
